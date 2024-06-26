@@ -1,18 +1,131 @@
+body{
+    background-color: rgb(50, 50, 50);
+}
+.headerPanel{
+    height: 200px;
+    display: flex;
+}
+
+.t{
+    border: solid;
+    border-radius: 10px;
+    border-color: lightgreen;
+    background-color: black;
+    
+}
+
+.tic{
+    color: greenyellow;
+    box-shadow: 0px 0px 10pt 5pt greenyellow;
+}
+
+.tac{
+    color:plum;
+    box-shadow: 0px 0px 10pt 5pt plum;
+}
+
+.toe{
+    color:aqua;
+    box-shadow: 0px 0px 10pt 5pt aqua;
+}
+
+.gameContainer{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticTacToeContainer{
+    margin: auto;
+    display: flex;
+    text-align: center;
+    height: 100px;
+}
+
+.boardContainer{
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: black;
+}
+
+.box{
+    background-color: lightgrey;
+    font-size: 50pt;
+    text-align: center;
+    border: solid;
+    font-family: Impact, sans-serif;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: grey;
+    transform: scale(1.1);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 5px rgb(126, 255, 126);
+}
+.box:active{
+    background-color: whitesmoke;
+}
+
 .playButton{
+    
     margin: auto;
     width: 200px;
+
     border: 3px;
     border-radius: 20px;
     background-color: #00c800;
+    box-shadow: 0px 0px 10px 5px #0ff;
     color: rgb(255, 255, 255);
-    font-family: sans-serif;
+    font-family: Impact, sans-serif;
+    font-weight: bold;
     padding: 10px;
     cursor: pointer;
 }
 .playButton:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 40px 20px #0ff;
     animation-name: play-game;
-    animation-duration: 3s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+.playButton:active{
+    transform: scale(1.3);
+
+    
 }
 @keyframes play-game {
-    
+    0% {
+        border-top-color: red;
+        border-right-color: purple;
+        border-bottom-color: blue;
+        border-style: solid;
+    }
+    25% {
+        border-right-color: red;
+        border-bottom-color: purple;
+        border-left-color: blue;
+        border-style: solid;
+    }
+    50% {
+        border-bottom-color: red;
+        border-left-color: purple;
+        border-top-color: blue;
+        border-style: solid;
+    }
+    75% {
+        border-left-color: red;
+        border-top-color: purple;
+        border-right-color: blue;
+        border-style: solid;
+    }
+    100% {
+        border-top-color: red;
+        border-right-color: purple;
+        border-bottom-color: blue;
+        border-style: solid;
+    }
 }
