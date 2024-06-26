@@ -1,0 +1,18 @@
+.playButton{
+    margin: auto;
+    width: 200px;
+    border: 3px;
+    border-radius: 20px;
+    background-color: #00c800;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    padding: 10px;
+    cursor: pointer;
+}
+.playButton:hover{
+    animation-name: play-game;
+    animation-duration: 3s;
+}
+@keyframes play-game {
+    
+}
